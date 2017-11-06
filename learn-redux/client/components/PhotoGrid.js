@@ -10,7 +10,7 @@ class PhotoGrid extends Component {
 		return(
 			<div className="photo-grid">
 				{
-					this.props.posts.map((post, index) => <Photo {...this.props} />)
+					this.props.posts.map((post, index) => <Photo {...this.props} key={} />)
 				}
 			</div>
 		);

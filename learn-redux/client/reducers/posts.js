@@ -8,11 +8,11 @@ function posts(state = [], action) {
 	switch(action.type) {
 		case 'INCREMENT_LIKES':
 			//return updated state
-			console.log('Incrementing Likes!');
+			// console.log('Incrementing Likes!');
 
-			console.log('-'.repeat(70));
-			console.log(state);
-			console.log('-'.repeat(70));
+			// console.log('-'.repeat(70));
+			// console.log(state);
+			// console.log('-'.repeat(70));
 
 			const { index } = action;
 
@@ -29,8 +29,8 @@ function posts(state = [], action) {
 			return state;
 	}
 
-	console.log('The post will change');
-	console.log(state, action);
+	// console.log('The post will change');
+	// console.log(state, action);
 
 	return state;
 }

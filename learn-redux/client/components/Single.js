@@ -13,13 +13,13 @@ class Single extends Component {
 		const post = this.props.posts[index];
 		const postComments = this.props.comments[postId] || [];
 
-		console.log(post);
+		// console.log(post);
 		// get us the post
 
 		return(
 			<div className="single-photo">
 				<Photo index={ index } post={ post } { ...this.props } />
-				<Comments postComments={ postComments } />
+				<Comments postComments={ postComments } { ...this.props } />
 			</div>
 		);
 	}

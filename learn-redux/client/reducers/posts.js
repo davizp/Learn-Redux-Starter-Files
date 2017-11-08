@@ -10,6 +10,10 @@ function posts(state = [], action) {
 			//return updated state
 			console.log('Incrementing Likes!');
 
+			console.log('-'.repeat(70));
+			console.log(state);
+			console.log('-'.repeat(70));
+
 			const { index } = action;
 
 			return [

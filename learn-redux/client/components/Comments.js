@@ -5,16 +5,21 @@ class Comments extends Component {
 		super(props);
 
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.renderComment = this.renderComment.bind(this);
 	}
 
 	renderComment(comment, index) {
+
+		const { postId } = this.props.params;
 
 		return (
 			<div className="comment" key={ index }>
 				<p>
 					<strong>{ comment.user }</strong>
 					{ comment.text }
-					<button className="remove-comment">&times;</button>
+					<button className="remove-comment" onClick={ this.props.removeComment.bind(null, postId, index) }>
+						&times;
+					</button>
 				</p>
 			</div>
 		);
@@ -29,6 +34,8 @@ class Comments extends Component {
 		const comment = this.comment.value;
 
 		this.props.addComment( postId, author, comment );
+
+		this.form.reset();
 	}
 
 	render() {
